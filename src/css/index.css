@@ -159,6 +159,9 @@
     gap: 50px 15px;
     justify-items: center;
   }
+  .introduce .info .info__item .info__item__box {
+    padding-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -167,5 +170,138 @@
     grid-template-columns: 1fr;
     gap: 50px 0px;
     justify-items: center;
+  }
+}
+
+/* 비즈니스 섹션 */
+
+.business {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.business .business__type {
+  display: flex;
+  color: var(--bg-surface);
+  position: relative;
+  justify-content: end;
+}
+
+.business .business__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+
+.business .text-box-business {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--ips-navy);
+}
+
+.business .business_border {
+  color: var(--ips-navy);
+}
+
+.business .text-box-title {
+  font-size: 24px;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.business .text-box-sub {
+  color: var(--text-secondary);
+}
+
+.business .business__type .business__type__item {
+  width: 100%;
+  position: relative;
+}
+
+.business .business__type .business__type__item a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.business .business__type .business__type__item img {
+  width: 100%;
+}
+
+.business .business__type .business__type__text-box {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.business .business__type .business__type__text-box span {
+  display: block;
+  text-align: center;
+}
+
+.business
+  .business__type
+  .business__type__text-box
+  .business__type__text-box__title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.business
+  .business__type
+  .business__type__text-box
+  .business__type__text-box__sub {
+  display: block;
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1100px) {
+  .business {
+    grid-template-columns: 1fr;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .business .business__inner {
+    padding: 50px 0px;
+  }
+
+  .business .business__type .business__type__item {
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .business
+    .business__type
+    .business__type__text-box
+    .business__type__text-box__title {
+    font-size: 20px;
+  }
+
+  .business
+    .business__type
+    .business__type__text-box
+    .business__type__text-box__sub {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .business .business__type {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .business .business__type .business__type__item {
+    height: 200px;
+    overflow: hidden;
   }
 }
