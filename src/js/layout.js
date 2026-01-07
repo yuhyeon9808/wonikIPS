@@ -88,3 +88,23 @@ window.addEventListener('scroll', () => {
     mobileHeader.classList.remove('on');
   }
 });
+
+//footer 사이트 메뉴
+const site_btn = document.querySelector('.site-btn');
+
+site_btn.addEventListener('click', () => {
+  const site_menu = document.querySelector('.site-menu');
+  site_menu.classList.add('open');
+});
+
+document.addEventListener('click', (e) => {
+  const openedMenu = document.querySelector('.site-menu.open');
+  if (!openedMenu) return;
+
+  const insideMenu = e.target.closest('.site-menu');
+  const onBtn = e.target.closest('.site-btn');
+
+  if (!insideMenu && !onBtn) {
+    openedMenu.classList.remove('open');
+  }
+});

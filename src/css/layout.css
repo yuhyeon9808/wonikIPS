@@ -27,14 +27,18 @@ header .logo:hover .logo-default {
 }
 
 /* 언어 메뉴 */
+header .inner {
+  position: relative;
+}
+
 header .lang-menu {
   width: 80px;
   height: auto;
   background-color: var(--bg-surface);
   z-index: 15px;
   position: absolute;
-  top: 80px;
-  right: 40px;
+  top: 0px;
+  right: 30px;
   text-align: center;
   display: none;
   color: var(--text-primary);
@@ -45,10 +49,14 @@ header .lang-menu {
     width: 70px;
     position: absolute;
     top: 70px;
-    right: 0px;
   }
 }
 
+@media screen and (max-width: 768px) {
+  header .lang-menu {
+    right: 0px;
+  }
+}
 .lang-menu.open {
   display: block;
 }
@@ -265,5 +273,122 @@ header:hover .menu-btn {
 
   .m-header {
     display: flex;
+  }
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 265px;
+  background-color: var(--bg-footer);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+footer .inner {
+  width: 1440px;
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .footer__left {
+  display: flex;
+  gap: 70px;
+}
+
+footer .footer__text .footer__text__list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+footer
+  .footer__text
+  .footer__text__list
+  .footer__text__list__item:nth-child(1) {
+  font-weight: 600;
+}
+
+footer .footer__site {
+  display: flex;
+  align-self: end;
+  position: relative;
+}
+
+footer .footer__site .site-btn {
+  display: flex;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.site-menu {
+  display: none;
+  position: absolute;
+  top: -200px;
+}
+
+.site-menu .site-menu__list li {
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.site-menu.open {
+  display: block;
+  width: 150px;
+  height: auto;
+  background-color: var(--bg-surface);
+}
+
+@media screen and (max-width: 1439px) {
+  footer {
+    width: 100%;
+  }
+  footer .inner {
+    width: 100%;
+  }
+
+  footer .footer__left {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 320px;
+  }
+
+  footer .inner {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 20px;
+    align-items: start;
+  }
+
+  footer .footer__text .footer__text__list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  footer .footer__text .footer__text__list span {
+    display: none;
+  }
+
+  footer .footer__site {
+    padding-top: 20px;
+    display: flex;
+    align-self: start;
+  }
+
+  footer .footer__site .site-btn {
+    padding: 0;
   }
 }
