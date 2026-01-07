@@ -87,6 +87,7 @@
   padding: 110px 0px;
   background-color: white;
 }
+
 .introduce .introduce__text-box {
   text-align: center;
   padding-bottom: 90px;
@@ -147,4 +148,24 @@
 .introduce .info .info__number-box span {
   font-size: 16px;
   color: var(--text-secondary);
+}
+
+@media screen and (max-width: 1440px) {
+  .introduce .info {
+    max-width: 768px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 15px;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .introduce .info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px 0px;
+    justify-items: center;
+  }
 }
