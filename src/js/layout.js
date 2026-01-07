@@ -41,3 +41,31 @@ menu_btn.addEventListener('click', () => {
 close_btn.addEventListener('click', () => {
   m_nav.classList.remove('open');
 });
+
+//언어 버튼
+const lang_btn = document.querySelectorAll('.lang-btn');
+const lang_menu = document.querySelector('.lang-menu');
+
+lang_btn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const headerEl = btn.closest('header');
+    const menuEl = headerEl.querySelector('.lang-menu');
+
+    headerEl.classList.add('on');
+    menuEl.classList.add('open');
+  });
+});
+
+document.addEventListener('click', (e) => {
+  const openedMenu = document.querySelector('.lang-menu.open');
+  if (!openedMenu) return;
+
+  const headerEl = openedMenu.closest('header');
+  const insideMenu = e.target.closest('.lang-menu');
+  const onBtn = e.target.closest('.lang-btn');
+
+  if (!insideMenu && !onBtn) {
+    openedMenu.classList.remove('open');
+    headerEl.classList.remove('on');
+  }
+});

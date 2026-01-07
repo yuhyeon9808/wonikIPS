@@ -1,3 +1,62 @@
+/* Logo */
+header .logo {
+  width: 153px;
+  position: relative;
+  display: inline-block;
+}
+
+header .logo img {
+  display: block;
+}
+
+header .logo .logo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+header.on .logo .logo-hover,
+header:hover .logo .logo-hover {
+  opacity: 1;
+}
+
+header .logo:hover .logo-default {
+  opacity: 0;
+}
+
+/* 언어 메뉴 */
+header .lang-menu {
+  width: 80px;
+  height: auto;
+  background-color: var(--bg-surface);
+  z-index: 15px;
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  text-align: center;
+  display: none;
+  color: var(--text-primary);
+}
+
+@media screen and (max-width: 1440px) {
+  header .lang-menu {
+    width: 70px;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+  }
+}
+
+.lang-menu.open {
+  display: block;
+}
+
+header .lang-menu .lang-menu__list li {
+  padding: 10px 0px;
+}
+
 /* header pc */
 .header {
   width: 100%;
@@ -30,34 +89,6 @@ header:hover .menu-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* Logo */
-header .logo {
-  width: 153px;
-  position: relative;
-  display: inline-block;
-}
-
-header .logo img {
-  display: block;
-}
-
-header .logo .logo-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-header.on .logo .logo-hover,
-header:hover .logo .logo-hover {
-  opacity: 1;
-}
-
-header .logo:hover .logo-default {
-  opacity: 0;
 }
 
 /* Nav */
@@ -123,7 +154,6 @@ header .logo:hover .logo-default {
   display: flex;
   flex-direction: column;
   gap: 7px;
-
   font-weight: 400;
   color: var(--text-secondary);
 }
