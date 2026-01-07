@@ -69,3 +69,22 @@ document.addEventListener('click', (e) => {
     headerEl.classList.remove('on');
   }
 });
+
+//스크롤 이벤트
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    header.classList.add('on');
+  } else {
+    header.classList.remove('on');
+  }
+});
+
+const mobileHeader = document.querySelector('.m-header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    mobileHeader.classList.add('on');
+  } else {
+    mobileHeader.classList.remove('on');
+  }
+});

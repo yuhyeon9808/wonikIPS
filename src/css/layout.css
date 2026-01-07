@@ -184,14 +184,13 @@ header:hover .menu-btn {
 
 /* Mobile 메뉴 */
 .m-nav {
-  width: 320px;
+  width: 330px;
   height: 100dvh;
   padding: 30px 10px;
-
   position: fixed;
   top: 0;
-  left: -320px;
-  z-index: 15;
+  left: -330px;
+  z-index: 20;
 
   background-color: var(--bg-surface);
 }
