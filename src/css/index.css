@@ -82,6 +82,21 @@
   }
 }
 
+@media screen and (max-width: 468px) {
+  .hero-video .video-text {
+    padding: 0px 10px;
+  }
+  .hero-video .video-text .video-text__title {
+    font-size: 20px;
+  }
+  .hero-video .video-text .view-box .video-text-border {
+    display: none;
+  }
+  .hero-video .video-text .view-box .view-btn {
+    padding-left: 0px;
+  }
+}
+
 /* 소개 섹션 */
 .introduce {
   padding: 110px 0px;
@@ -362,10 +377,6 @@
 }
 
 @media screen and (max-width: 900px) {
-  .news .inner {
-    padding: 0px 15px;
-  }
-
   .news .news__flex {
     display: flex;
     flex-direction: column;
@@ -374,6 +385,12 @@
 
   .news .news__title {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news .inner {
+    padding: 0px 10px;
   }
 }
 
@@ -398,6 +415,13 @@
   .employment .inner {
     width: 1440px;
     padding: 60px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .employment .inner {
+    width: 1440px;
+    padding: 60px 20px;
   }
 }
 
