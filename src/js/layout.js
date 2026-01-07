@@ -28,3 +28,16 @@ if (navList && megaMenu && header) {
     }
   });
 }
+
+//햄버거 메뉴
+const menu_btn = document.querySelector('.menu-btn');
+const m_nav = document.querySelector('.m-nav');
+const close_btn = document.querySelector('.close-btn');
+
+menu_btn.addEventListener('click', () => {
+  m_nav.classList.add('open');
+});
+
+close_btn.addEventListener('click', () => {
+  m_nav.classList.remove('open');
+});

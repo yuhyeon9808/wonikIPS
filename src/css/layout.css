@@ -1,36 +1,40 @@
-header {
+/* header pc */
+.header {
   width: 100%;
   height: 80px;
-  color: var(--bg-surface);
-  font-weight: 600;
   position: fixed;
   z-index: 10;
+  color: var(--bg-surface);
+  font-weight: 600;
 }
 
 header.on,
 header:hover {
   background-color: var(--bg-surface);
   color: var(--text-primary);
-  transition: 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 header.on .lang-btn,
-header:hover .lang-btn {
+header:hover .lang-btn,
+header.on .menu-btn,
+header:hover .menu-btn {
   color: var(--text-primary);
 }
 
-header .inner {
+.header .inner {
   width: 1440px;
   height: 100%;
   margin: 0 auto;
-  padding: 0px 50px;
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Logo */
 header .logo {
-  width: 183px;
+  width: 153px;
   position: relative;
   display: inline-block;
 }
@@ -39,7 +43,7 @@ header .logo img {
   display: block;
 }
 
-.logo-hover {
+header .logo .logo-hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -47,37 +51,39 @@ header .logo img {
   transition: opacity 0.25s ease;
 }
 
-header.on .logo-hover,
-header:hover .logo-hover {
+header.on .logo .logo-hover,
+header:hover .logo .logo-hover {
   opacity: 1;
 }
 
-.logo:hover .logo-default {
+header .logo:hover .logo-default {
   opacity: 0;
 }
 
-header .nav .nav__list {
+/* Nav */
+.header .nav__list {
   display: flex;
   gap: 52px;
 }
 
-header .lang-btn {
+.lang-btn {
   color: var(--bg-surface);
 }
 
-/* 투뎁스 */
+/* header pc 투뎁스 */
 .mega {
   width: 100%;
-  height: auto;
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border-light);
   z-index: 10;
   color: var(--text-primary);
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transform: translateY(-8px);
-  transition: 0.4s;
+
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s 0.4s;
 }
 
 .mega.open {
@@ -85,19 +91,17 @@ header .lang-btn {
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
+
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0s;
 }
 
 .mega .mega-inner {
   width: 1440px;
   margin: 0 auto;
+  padding: 60px 0;
+
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding: 60px 0px;
-}
-
-.mega .mega-title {
-  font-size: 18px;
-  margin-bottom: 10px;
 }
 
 .mega .mega-col {
@@ -106,14 +110,131 @@ header .lang-btn {
   gap: 20px;
 }
 
-.mega .mega-col .mega-subtitle {
+.mega .mega-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.mega .mega-subtitle {
   margin-bottom: 5px;
 }
 
-.mega .mega-col .mega-list {
-  font-weight: 400;
-  color: var(--text-secondary);
+.mega .mega-list {
   display: flex;
   flex-direction: column;
   gap: 7px;
+
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+/* header 모바일 */
+.m-header {
+  width: 100%;
+  height: 70px;
+  padding: 0 50px;
+
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  .m-header {
+    padding: 0 10px;
+  }
+}
+
+.m-header button {
+  color: var(--bg-surface);
+}
+
+/* Mobile 메뉴 */
+.m-nav {
+  width: 320px;
+  height: 100dvh;
+  padding: 30px 10px;
+
+  position: fixed;
+  top: 0;
+  left: -320px;
+  z-index: 15;
+
+  background-color: var(--bg-surface);
+}
+
+.m-nav.open {
+  position: fixed;
+  left: 0px;
+  transition: 0.3s;
+}
+
+.m-nav .btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.m-nav .close-btn {
+  padding: 10px;
+  color: var(--text-primary);
+}
+
+/* details marker 제거 */
+.m-nav__summary::-webkit-details-marker,
+.m-nav__sub-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Summary */
+.m-nav__summary,
+.m-nav__sub-summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.m-nav__summary {
+  padding: 15px;
+  font-weight: 600;
+}
+
+.m-nav__sub-summary {
+  padding: 10px 30px;
+}
+
+/* Sub / Group */
+.m-nav__sub,
+.m-nav__group {
+  padding: 10px;
+}
+
+.m-nav__subtitle {
+  padding: 10px 30px;
+  font-weight: 600;
+}
+
+.m-nav__sub > li a {
+  display: block;
+  padding: 10px 30px;
+  color: var(--text-secondary);
+}
+
+/* Hover */
+.m-nav__item .m-nav__summary:hover,
+.m-nav__sub > li:hover {
+  background-color: var(--border-light);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    display: none;
+  }
+
+  .m-header {
+    display: flex;
+  }
 }
