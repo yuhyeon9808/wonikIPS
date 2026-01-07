@@ -40,8 +40,7 @@
     <meta name="twitter:image" content="https://wonikIPS.vercel.app/ips.png" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon.png" />
 
     <!-- 구글 폰트 연결 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,7 +57,178 @@
     <link rel="stylesheet" href="/src/css/index.css" />
 
     <!-- 자바스크립트 파일 연결 -->
-    <script defer src="/src/javascript/layout.js"></script>
+    <script defer src="/src/js/layout.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="wrapper">
+      <!-- header -->
+      <header>
+        <div class="inner">
+          <!-- logo -->
+          <h1 class="logo">
+            <a href="#">
+              <img
+                src="/src/assets/icons/logo_w.png"
+                alt="WONIK IPS"
+                class="logo-default"
+              />
+              <img
+                src="/src/assets/icons/logo.png"
+                alt="WONIK IPS"
+                class="logo-hover"
+              />
+            </a>
+          </h1>
+          <!-- nav -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#">기업소개</a>
+              </li>
+              <li class="nav__item"><a href="#">ESG </a></li>
+              <li class="nav__item"><a href="#">사업 소개</a></li>
+              <li class="nav__item"><a href="#">홍보센터</a></li>
+              <li class="nav__item"><a href="#">투자정보</a></li>
+              <li class="nav__item"><a href="#">인재채용</a></li>
+            </ul>
+          </nav>
+          <!-- 언어 -->
+          <button class="lang-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-globe-icon lucide-globe"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+              <path d="M2 12h20" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 투뎁스 메뉴 -->
+        <div class="mega" id="mega-menu">
+          <div class="mega-inner">
+            <!-- 기업소개 -->
+            <div class="mega-col" data-panel="company">
+              <p class="mega-title">기업소개</p>
+              <ul class="mega-list">
+                <li><a href="#">기업개요</a></li>
+                <li><a href="#">CEO 인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+              </ul>
+            </div>
+
+            <!-- ESG -->
+            <div class="mega-col" data-panel="esg">
+              <p class="mega-title">ESG</p>
+
+              <div class="mega-group">
+                <p class="mega-subtitle">환경</p>
+                <ul class="mega-list">
+                  <li><a href="#">환경</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-group">
+                <p class="mega-subtitle">사회</p>
+                <ul class="mega-list">
+                  <li><a href="#">준법경영</a></li>
+                  <li><a href="#">임직원</a></li>
+                  <li><a href="#">사회공헌</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-group">
+                <p class="mega-subtitle">지배구조</p>
+                <ul class="mega-list">
+                  <li><a href="#">이사회</a></li>
+                  <li><a href="#">감사위원회</a></li>
+                  <li><a href="#">정관</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-group">
+                <p class="mega-subtitle">품질</p>
+                <ul class="mega-list">
+                  <li><a href="#">품질</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 사업소개 -->
+            <div class="mega-col" data-panel="business">
+              <p class="mega-title">사업소개</p>
+              <ul class="mega-list">
+                <li><a href="#">사업개요</a></li>
+                <li><a href="#">R&amp;D</a></li>
+                <li><a href="#">제품소개</a></li>
+                <li><a href="#">Semiconductor</a></li>
+                <li><a href="#">Display</a></li>
+              </ul>
+            </div>
+
+            <!-- 홍보센터 -->
+            <div class="mega-col" data-panel="pr">
+              <p class="mega-title">홍보센터</p>
+              <ul class="mega-list">
+                <li><a href="#">뉴스룸</a></li>
+                <li><a href="#">CI</a></li>
+                <li><a href="#">원익사보</a></li>
+              </ul>
+            </div>
+
+            <!-- 투자정보 -->
+            <div class="mega-col" data-panel="ir">
+              <p class="mega-title">투자정보</p>
+              <ul class="mega-list">
+                <li><a href="#">재무정보</a></li>
+                <li><a href="#">주식정보</a></li>
+                <li><a href="#">공시정보</a></li>
+                <li><a href="#">공고사항</a></li>
+                <li><a href="#">IR자료</a></li>
+                <li><a href="#">내부정보관리규정</a></li>
+              </ul>
+            </div>
+
+            <!-- 인재채용 -->
+            <div class="mega-col" data-panel="recruit">
+              <p class="mega-title">인재채용</p>
+              <ul class="mega-list">
+                <li><a href="#">인재상</a></li>
+                <li><a href="#">직무소개</a></li>
+                <li><a href="#">인사제도</a></li>
+                <li><a href="#">조직문화</a></li>
+                <li><a href="#">채용공고</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- video섹션 -->
+        <section class="hero-video">
+          <div class="layer"></div>
+          <video
+            src="/src/assets/images/video.mp4"
+            autoplay
+            muted
+            loop
+            poster="/src/assets/images/ips.png"
+          ></video>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer></footer>
+    </div>
+  </body>
 </html>
