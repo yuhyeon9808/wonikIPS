@@ -164,7 +164,7 @@
   color: var(--text-secondary);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1339px) {
   .introduce .info {
     max-width: 768px;
     margin: 0 auto;
