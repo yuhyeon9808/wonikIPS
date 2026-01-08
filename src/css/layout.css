@@ -268,7 +268,7 @@ header:hover .menu-btn {
 /* Hover */
 .m-nav__item .m-nav__summary:hover,
 .m-nav__sub > li:hover {
-  background-color: var(--border-light);
+  background-color: var(--bg-footer);
   border-radius: 4px;
 }
 

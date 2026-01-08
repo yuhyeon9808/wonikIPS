@@ -42,6 +42,26 @@ close_btn.addEventListener('click', () => {
   m_nav.classList.remove('open');
 });
 
+//투뎁스 하나만 열리게
+document.addEventListener('DOMContentLoaded', () => {
+  const mNav = document.querySelector('.m-nav');
+  if (!mNav) return;
+
+  const topDetails = mNav.querySelectorAll('details.m-nav__details');
+
+  topDetails.forEach((d) => d.removeAttribute('open'));
+
+  topDetails.forEach((current) => {
+    current.addEventListener('toggle', () => {
+      if (!current.open) return;
+
+      topDetails.forEach((d) => {
+        if (d !== current) d.removeAttribute('open');
+      });
+    });
+  });
+});
+
 //언어 버튼
 const lang_btn = document.querySelectorAll('.lang-btn');
 const lang_menu = document.querySelector('.lang-menu');
