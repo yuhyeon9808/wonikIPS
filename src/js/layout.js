@@ -74,7 +74,7 @@ document.addEventListener('click', (e) => {
 window.addEventListener('scroll', () => {
   if (window.scrollY > 0) {
     header.classList.add('on');
-  } else {
+  } else if (window.scrollY === 0 && !megaMenu.classList.contains('open')) {
     header.classList.remove('on');
   }
 });
