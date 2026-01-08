@@ -55,6 +55,10 @@
   padding-left: 20px;
 }
 
+.hero-video .view-btn:hover {
+  transform: scale(1.03);
+}
+
 @media screen and (max-width: 768px) {
   .hero-video .inner {
     padding: 0 10px;
@@ -238,6 +242,10 @@
   position: relative;
 }
 
+.business .business__type .business__type__item:hover {
+  filter: brightness(1.2);
+}
+
 .business .business__type .business__type__item a {
   width: 100%;
   display: flex;
@@ -354,10 +362,53 @@
 }
 
 .news .news__con {
+  position: relative;
   padding: 45px 40px;
   border: 1px solid var(--border-light);
+  background-color: var(--bg-surface);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 }
 
+/* 테두리 */
+.news .news__con::before,
+.news .news__con::after {
+  content: '';
+  position: absolute;
+  inset: 0px;
+  pointer-events: none;
+}
+
+/* 위 / 아래 */
+.news .news__con::before {
+  border-top: 2px solid var(--ips-navy);
+  border-bottom: 2px solid var(--ips-navy);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+/* 좌 / 우 */
+.news .news__con::after {
+  border-left: 2px solid var(--ips-navy);
+  border-right: 2px solid var(--ips-navy);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+}
+
+.news .news__con:hover {
+  border: none;
+}
+
+.news .news__con:hover::before {
+  transform: scaleX(1);
+}
+
+.news .news__con:hover::after {
+  transform: scaleY(1);
+}
 .news .news__con .news__con__date {
   color: var(--text-secondary);
   font-weight: 600;
@@ -444,11 +495,15 @@
 }
 
 .employment .employment__item {
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 33px 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.employment .employment__item:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .employment .employment__item .employment__item__number-box {
@@ -492,7 +547,8 @@
 @media screen and (max-width: 970px) {
   .employment {
     width: 100%;
-    height: 1100px;
+    height: auto;
+    padding: 60px 0;
     display: flex;
     align-items: center;
     justify-content: center;
