@@ -79,6 +79,7 @@ header.on,
 header:hover {
   background-color: var(--bg-surface);
   color: var(--text-primary);
+  border-bottom: 1px solid var(--border-light);
   transition: background-color 0.3s, color 0.3s;
 }
 
