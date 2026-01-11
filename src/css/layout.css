@@ -140,6 +140,7 @@ header:hover .menu-btn {
 .mega .mega-inner {
   max-width: 1440px;
   padding: 60px 50px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
